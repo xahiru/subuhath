@@ -14,12 +14,20 @@
 <div class="w3-content w3-display-container">
   <img class="mySlides" src="BALI.jpeg" style="width:100%">
   <img class="mySlides" src="amalfi-italy-.jpeg" style="width:100%">
+  <img class="mySlides" src="rome.jpeg" style="width:100%">
   
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
 <script>
+
+
+// function showAlert(){
+//   // alert("hello");
+//   console.log("hello2");
+// }
+  
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -37,18 +45,31 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
+
+
+  function showDivs2(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[n - 1].style.display = "block";
+  }
+
+
 </script>
 
-
+<img src="BALI.jpeg" class="w3-border" style="padding:4px;width:100%; display: none;">
   <div class="w3-container">
 
 
 <div class="w3-bar">
-  <a href="#" class="w3-button">1</a>
-  <a href="#" class="w3-button">2</a>
-  <a href="#" class="w3-button">3</a>
-  <a href="#" class="w3-button">4</a>
-  <a href="#" class="w3-button">5</a>
+  <a href="#" class="w3-button" onclick="showDivs2(1)">1</a>
+  <a href="#" class="w3-button" onclick="showDivs2(2)">2</a>
+  <a href="#" class="w3-button" onclick="showDivs2(3)">3</a>
+  <a href="#" class="w3-button" onclick="showDivs2(4)">4</a>
+  <a href="#" class="w3-button" onclick="showDivs2(5)">5</a>
 </div>
 
 
